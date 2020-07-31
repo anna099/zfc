@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arno Pro';
+    width: 50%;
+    margin: 5% 10%;
+    background: #faf9ef;
+    color: #111;
+    counter-reset: section;
+}
+
+p {
+    font-size: 1.3em;
+    text-align: justify;
+    width: 50ch;
+}
+
+/* Paragraph numbering */
+p:not(.jax)::before {
+    counter-increment: section;
+    content: counter(section);
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: rgba(20, 20, 20, 0.2);
+    white-space: nowrap;
+    clear: right;
+    float: right;
+    margin-right: -10%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Adobe Caslon Pro';
+    font-weight: 600;
+    margin-top: 1.5em;
+}
+
+a {
+    color: #a14a3f;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid #a14a3f;
+}
+
+.name {
+    font-variant: small-caps;
+    text-transform: lowercase;
+}

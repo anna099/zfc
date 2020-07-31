@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zermelo-Fraenkel Set Theory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <script src="./smartquotes.js"></script>
+</head>
+<body>
+    <h1>Zermelo-Fraenkel Set Theory</h1>
+
+    <h2>Axioms</h2>
+
+    <ol>
+        <li>
+            <p>The axiom of <b>extensionality</b> states that two sets are equal
+            if they have the same elements.</p>
+            <p class=jax>
+                $$ \forall x \forall y [\forall z(z \in x \iff z \in y) \implies x = y] $$
+            </p>
+        </li>
+        <li>
+            <p>The axiom of <b>regularity</b> or <b>foundation</b> states that
+            every non-empty set \(x\) has a member \(y\) whereby \(x\) and \(y\)
+            are disjoint.</p>
+            <p class=jax>
+                $$ \forall x (x \ne \varnothing \implies \exists y \in x (y \cap x = \varnothing)) $$
+            </p>
+        </li>
+        <li>
+            <p>The axiom of <b>separation</b> is necessary to avoid
+            <span class=name>Russell's Paradox</span>, which is an inconsistency
+            in <span class=name>Frege's</span> formulation of set theory. For
+            Frege, there is always a set that can be defined by its inclusion of
+            only the terms which satisfy a particular formula. Formally written,
+            Frege's definition is:</p>
+            <p class=jax>
+                $$ (\exists x) (\forall y) [F(y) \implies (y \in x)] $$
+            </p>
+            <p>The problem with Frege's definition is that it merely
+            <i>assumes</i> the existence of the superset \(x\); the axiom of
+            separation in Zermelo-Fraenkel, on the other hand is
+            <i>conditional</i> on its existence:</p>
+            <p class=jax>
+                $$ (\forall x) (\exists y) (\forall z) [((z \in x) \land F(z)) \implies (z \in y)] $$
+            </p>
+        </li>
+    </ol>
+
+    <script>smartquotes()</script>
+</body>
+</html>

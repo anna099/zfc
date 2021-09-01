@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zermelo-Fraenkel Set Theory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <script src="./smartquotes.js"></script>
+</head>
+<body>
+    <div id="content">
+
+    <h1>Mathematical Proofs</h1>
+
+    <h2>Examples</h2>
+
+    <p>If an integer \(x\) is odd, then \(x + 1\) is even.</p>
+
+    <p class=jax>
+        $$ (\forall x \in \mathbb{Z}) ((\nexists y \in \mathbb{Z}) x = 2y) \implies (\exists z \in \mathbb{Z}) x + 1 = 2z $$
+        <!-- $$ \forall x\, \forall y [\forall z(z \in x \iff z \in y) \implies x = y] $$ -->
+    </p>
+
+    <script>smartquotes()</script>
+</body>
+</html>
